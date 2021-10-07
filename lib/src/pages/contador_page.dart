@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 
+/*
+  Código realizado a partir del curso:
+  Flutter: Tu guía completa de desarrollo para iOS y Android
+*/
+
 class ContadorPage extends StatefulWidget {
   @override
   createState() {
@@ -33,6 +38,7 @@ class _ContadorPageState extends State<ContadorPage> {
             ),
           ],
         )),
+        // Se crea el método _crearBotones para hacer mas legible el código
         floatingActionButton: _crearBotones()
         //floatingActionButtonLocation: FloatingActionButtonLocation.endDocked,
         );
@@ -58,12 +64,14 @@ class _ContadorPageState extends State<ContadorPage> {
 
   // Método privado
   void _agregar() {
+    // Forma de declaración del setState
     setState(() {
       _conteo++;
     });
   }
 
   void _sustraer() {
+    // Forma reducida de la declaración del setState
     setState(() => _conteo--);
   }
 
